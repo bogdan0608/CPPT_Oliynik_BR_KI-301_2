@@ -1,0 +1,36 @@
+﻿<Window
+    Background="#ECECEC"
+    Height="450"
+    Title="EditBooking"
+    Width="300"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d"
+    x:Class="lab4_19.Pages.EditBooking"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:lab4_19.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Window.Resources>
+        <ResourceDictionary Source="../styles.xaml" />
+    </Window.Resources>
+    <Grid>
+        <StackPanel Margin="50">
+            <TextBlock Text="Ім'я:" />
+            <TextBox Margin="0,0,0,10" Text="{Binding Name}" />
+
+            <TextBlock Text="Номер телефону:" />
+            <TextBox Margin="0,0,0,10" Text="{Binding Phone}" />
+
+            <TextBlock Text="Час запису:" />
+            <TextBox Margin="0,0,0,10" Text="{Binding Time}" />
+
+            <Button
+                Click="EditBookingClick"
+                Content="Оновити запис"
+                Height="40"
+                HorizontalAlignment="Center"
+                Width="191" />
+        </StackPanel>
+    </Grid>
+</Window>
